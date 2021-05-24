@@ -1,8 +1,5 @@
 # React responsive dynamic tabs
 
-### Your feedback is highly appreciated!
-
-Please, file an issue if something went wrong or let me know via Twitter @maslianok
 
 #### Responsive
 
@@ -23,17 +20,17 @@ We are using [`react-resize-detector`](https://github.com/maslianok/react-resize
 
 ## Installation
 
-`npm install react-responsive-tabs`
+`npm install responsiveDynamictabs`
 
 ## Example
 
 ```javascript
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Tabs from 'react-responsive-tabs';
+import Tabs from 'responsiveDynamictabs';
 
 // IMPORTANT you need to include the default styles
-import 'react-responsive-tabs/styles.css';
+import 'responsiveDynamictabs/styles.css';
 
 const presidents = [
   { name: 'George Washington', biography: '...' },
