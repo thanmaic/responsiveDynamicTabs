@@ -20,17 +20,17 @@ We are using [`react-resize-detector`](https://github.com/maslianok/react-resize
 
 ## Installation
 
-`npm install responsiveDynamictabs`
+`npm install responsivedynamictabs`
 
 ## Example
 
 ```javascript
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Tabs from 'responsiveDynamictabs';
+import Tabs from 'responsivedynamictabs';
 
 // IMPORTANT you need to include the default styles
-import 'responsiveDynamictabs/styles.css';
+import 'responsivedynamictabs/styles.css';
 
 const presidents = [
   { name: 'George Washington', biography: '...' },
