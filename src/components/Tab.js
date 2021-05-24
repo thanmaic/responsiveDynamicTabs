@@ -35,7 +35,7 @@ export default class Tab extends Component {
   };
 
   render() {
-    const { id, classNames, selected, disabled, panelId, onFocus, onBlur, originalKey } = this.props;
+    const { id, classNames, selected, disabled, panelId, onFocus, onBlur, originalKey, visible } = this.props;
 
     return (
       <div
@@ -47,6 +47,7 @@ export default class Tab extends Component {
         aria-expanded={selected ? 'true' : 'false'}
         aria-disabled={disabled ? 'true' : 'false'}
         aria-controls={panelId}
+        aria-hidden={visible ? 'visible' : 'hidden'}
         tabIndex="0"
         onClick={this.onTabClick}
         onFocus={onFocus(originalKey)}

@@ -150,7 +150,7 @@ export default class Tabs extends Component {
           tabDimensionsNext[tabKey] = tabDimensions[tabKey];
         }
 
-        tabsTotalWidth += tabDimensionsNext[tabKey].width;
+        tabsTotalWidth += tabDimensions[tabKey] && tabDimensions[tabKey].width ? tabDimensions[tabKey].width : 100;
       }
     });
 
@@ -224,8 +224,9 @@ export default class Tabs extends Component {
     );
   };
 
-  getTabProps = ({ title, key, selected, collapsed, tabIndex, disabled, className, onRemove, allowRemove }) => ({
+  getTabProps = ({ title, key, selected, collapsed, tabIndex, disabled, className, onRemove, allowRemove }, value) => ({
     selected,
+    visible: value,
     allowRemove,
     children: title,
     key: tabPrefix + key,
@@ -256,11 +257,12 @@ export default class Tabs extends Component {
     isHidden,
   });
 
-  getShowMoreProps = (isShown, isSelectedTabHidden, showMoreLabel) => ({
+  getShowMoreProps = (isShown, isSelectedTabHidden, showMoreLabel, selectedTabKey) => ({
     onShowMoreChanged: this.showMoreChanged,
     isShown,
     label: showMoreLabel,
     hasChildSelected: isSelectedTabHidden,
+    selectedTabKey: selectedTabKey
   });
 
   getClassNamesFor = (type, { selected, collapsed, tabIndex, disabled, className = '', isHidden }) => {
@@ -370,7 +372,7 @@ export default class Tabs extends Component {
           <div className={containerClasses} ref={this.tabsWrapper} onKeyDown={this.onKeyDown}>
             <div className={tabsClasses}>
               {tabsVisible.reduce((result, tab) => {
-                result.push(<Tab {...this.getTabProps(tab)} />);
+                result.push(<Tab {...this.getTabProps(tab, true)} />);
 
                 if (isCollapsed && (!unmountOnExit || selectedTabKey === tab.key)) {
                   result.push(<TabPanel {...this.getPanelProps(panels[tab.key], selectedTabKey !== tab.key)} />);
@@ -379,9 +381,9 @@ export default class Tabs extends Component {
               }, [])}
 
               {!isCollapsed && (
-                <ShowMore {...this.getShowMoreProps(showMore, isSelectedTabHidden, showMoreLabel)}>
+                <ShowMore {...this.getShowMoreProps(showMore, isSelectedTabHidden, showMoreLabel, selectedTabKey)}>
                   {tabsHidden.map(tab => (
-                    <Tab {...this.getTabProps(tab)} />
+                    <Tab {...this.getTabProps(tab, false)} />
                   ))}
                 </ShowMore>
               )}

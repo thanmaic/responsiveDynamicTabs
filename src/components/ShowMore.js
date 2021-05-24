@@ -100,7 +100,7 @@ export default class ShowMore extends Component {
         onClick={this.toggleVisibility}
       >
         <div className={showMoreLabelStyles}>{label}</div>
-        <div className={listStyles} aria-hidden={isListHidden} role="menu">
+        <div  id={"moreMenuTab-1"} className={listStyles} aria-hidden={isListHidden} role={isListHidden ? "menu-Opened" : "menu-Closed"}>
           {children}
         </div>
       </div>
