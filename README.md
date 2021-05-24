@@ -1,6 +1,4 @@
-# React responsive tabs
-
-#### [Live demo](http://maslianok.github.io/react-responsive-tabs/)
+# React responsive dynamic tabs
 
 ### Your feedback is highly appreciated!
 
@@ -26,28 +24,6 @@ We are using [`react-resize-detector`](https://github.com/maslianok/react-resize
 ## Installation
 
 `npm install react-responsive-tabs`
-
-## Demo
-
-#### [Live demo](http://maslianok.github.io/react-responsive-tabs/)
-
-Local demo
-
-```sh
-# 1. clone the repository
-git clone https://github.com/maslianok/react-responsive-tabs.git
-
-# 2. Install react-responsive-tabs dependencies. You must do it because we use raw library code in the example
-cd react-responsive-tabs
-npm install
-
-# 3. Install dependencies to run the example
-cd examples
-npm install
-
-# 4. Finally run the example
-npm start
-```
 
 ## Example
 
@@ -102,7 +78,3 @@ All entities listed below should be used as props to the `Tabs` component.
 | removeActiveOnly | Bool          | Only active tab has removal option                                           | `false`   |
 | showInkBar       | Bool          | Add MaterialUI InkBar effect                                                 | `false`   |
 | uid              | any           | An optional external id. The component rerenders when it changes             | undefined |
-
-### License
-
-MIT
