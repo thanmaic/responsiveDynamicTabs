@@ -1,10 +1,5 @@
-# React responsive tabs
+# React responsive dynamic tabs
 
-#### [Live demo](http://maslianok.github.io/react-responsive-tabs/)
-
-### Your feedback is highly appreciated!
-
-Please, file an issue if something went wrong or let me know via Twitter @maslianok
 
 #### Responsive
 
@@ -25,39 +20,17 @@ We are using [`react-resize-detector`](https://github.com/maslianok/react-resize
 
 ## Installation
 
-`npm install react-responsive-tabs`
-
-## Demo
-
-#### [Live demo](http://maslianok.github.io/react-responsive-tabs/)
-
-Local demo
-
-```sh
-# 1. clone the repository
-git clone https://github.com/maslianok/react-responsive-tabs.git
-
-# 2. Install react-responsive-tabs dependencies. You must do it because we use raw library code in the example
-cd react-responsive-tabs
-npm install
-
-# 3. Install dependencies to run the example
-cd examples
-npm install
-
-# 4. Finally run the example
-npm start
-```
+`npm install responsiveDynamictabs`
 
 ## Example
 
 ```javascript
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Tabs from 'react-responsive-tabs';
+import Tabs from 'responsiveDynamictabs';
 
 // IMPORTANT you need to include the default styles
-import 'react-responsive-tabs/styles.css';
+import 'responsiveDynamictabs/styles.css';
 
 const presidents = [
   { name: 'George Washington', biography: '...' },
@@ -102,7 +75,3 @@ All entities listed below should be used as props to the `Tabs` component.
 | removeActiveOnly | Bool          | Only active tab has removal option                                           | `false`   |
 | showInkBar       | Bool          | Add MaterialUI InkBar effect                                                 | `false`   |
 | uid              | any           | An optional external id. The component rerenders when it changes             | undefined |
-
-### License
-
-MIT
