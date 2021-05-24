@@ -1,17 +1,17 @@
 {
-  "author": "Vitalii Maslianok <maslianok@gmail.com> (https://github.com/maslianok)",
-  "version": "4.4.1",
-  "name": "react-responsive-tabs",
-  "description": "React responsive tabs",
+  "author": "Thanmai.C (https://github.com/thanmaic)",
+  "version": "1.0.0",
+  "name": "responsiveDynamictabs",
+  "description": "React responsive dynamic tabs",
   "license": "MIT",
   "main": "lib/index.js",
   "bugs": {
-    "url": "https://github.com/maslianok/react-responsive-tabs/issues"
+    "url": "https://github.com/thanmaic/responsiveDynamictabs/issues"
   },
   "directories": {
     "example": "examples"
   },
-  "homepage": "https://github.com/maslianok/react-responsive-tabs",
+  "homepage": "https://github.com/thanmaic/responsiveDynamictabs",
   "keywords": [
     "react",
     "responsive",
@@ -19,11 +19,11 @@
     "tab"
   ],
   "maintainers": [
-    "maslianok <maslianok@gmail.com>"
+    "Thanmai.C"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maslianok/react-responsive-tabs.git"
+    "url": "git+https://github.com/thanmaic/responsiveDynamictabs.git"
   },
   "peerDependencies": {
     "react": "^15.1.0 || ^16.0.0 || ^17.0.0",
